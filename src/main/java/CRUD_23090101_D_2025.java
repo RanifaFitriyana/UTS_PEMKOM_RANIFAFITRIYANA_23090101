@@ -26,11 +26,23 @@ public class CRUD_23090101_D_2025 {
         MongoCollection<Document> tabel = db.getCollection("coll_23090101_D_2025");
         
         //insert data (create)
-        Document data = new Document("name","Ranifa Fitriyana") 
+        Document data1 = new Document("name","Ranifa Fitriyana") 
                 .append("email", "ranifa@gmail.com")
                 .append("mataKuliah", Arrays.asList("Pemrograman Komputer", "Pemrograman Web", "Basis Data"))
                 .append("status", "Mahasiswa aktif");
-        tabel.insertOne(data); //proses input data
+        tabel.insertOne(data1); //proses input data
+        
+        Document data2 = new Document("name","Salwa Eka") 
+                .append("email", "salwa@gmail.com")
+                .append("mataKuliah", Arrays.asList("Pemrograman Komputer", "Pemrograman Web", "Basis Data"))
+                .append("status", "Mahasiswa tidak aktif");
+        tabel.insertOne(data2); //proses input data
+        
+        Document data3 = new Document("name","Tri Afni") 
+                .append("email", "afni@gmail.com")
+                .append("mataKuliah", Arrays.asList("Pemrograman Komputer", "Pemrograman Web", "Basis Data"))
+                .append("status", "Mahasiswa aktif");
+        tabel.insertOne(data3); //proses input data
         
         //view data (read)
         System.out.println("==========Before Update==========");
